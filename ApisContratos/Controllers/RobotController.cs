@@ -1,4 +1,5 @@
 ﻿using ApisContratos.Handlers;
+using ApisContratos.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -17,6 +18,16 @@ namespace ApisContratos.Controllers
             Procedures pro = new Procedures();
             ModelState.Clear();
             return Ok(pro.getProcsRWeb());
+        }
+
+        [HttpPost] // Probada y funcionando
+        [Route("GetAllProcRWeb")]
+        public IActionResult getProcRweb([FromBody] REQUEST_ID data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.deleteRWeb(data.id));
         }
 
 

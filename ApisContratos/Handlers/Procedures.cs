@@ -41,5 +41,39 @@ namespace ApisContratos.Handlers
             }
             return response;
         }
+
+        public bool deleteRWeb(int id)
+        {
+            bool response;
+            var cn = new ContratosConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "DELETE FROM R_Web WHERE id ='"+id+"'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            
+
+                                response = true;
+                            
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    response = false;
+                    throw;
+                    
+                }
+
+
+            }
+            return response;
+        }
     }
 }
