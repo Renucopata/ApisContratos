@@ -30,7 +30,7 @@ namespace ApisContratos.Controllers
             return Ok(pro.deleteRWeb(data.id));
         }
 
-        [HttpPost] // Probada y funcionando
+        [HttpPost] // Terminada
         [Route("UpdateEstadoContratos")]
         public IActionResult updateEstadoCon([FromBody] REQUEST_NroOperacion data)
         {
@@ -58,6 +58,16 @@ namespace ApisContratos.Controllers
             Procedures pro = new Procedures();
             ModelState.Clear();
             return Ok(pro.getRepreJefeAg(data.jefeAgencia));
+        }
+
+        [HttpPost] // Terminada
+        [Route("GetGarantiasNumOp")]
+        public IActionResult GetGarantiasNumOp([FromBody] REQUEST_NroOperacion data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getGarantiasNumOp(data.NroOperacion));
         }
 
 

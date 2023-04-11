@@ -1,24 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\ApisContratos\\ApisContratos\\ApisContratos.csproj": {}
+    "D:\\ApisContratos1104\\ApisContratos\\ApisContratos\\ApisContratos.csproj": {}
   },
   "projects": {
-    "D:\\ApisContratos\\ApisContratos\\ApisContratos.csproj": {
+    "D:\\ApisContratos1104\\ApisContratos\\ApisContratos\\ApisContratos.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\ApisContratos\\ApisContratos\\ApisContratos.csproj",
+        "projectUniqueName": "D:\\ApisContratos1104\\ApisContratos\\ApisContratos\\ApisContratos.csproj",
         "projectName": "ApisContratos",
-        "projectPath": "D:\\ApisContratos\\ApisContratos\\ApisContratos.csproj",
-        "packagesPath": "C:\\Users\\GAMER XTREME\\.nuget\\packages\\",
-        "outputPath": "D:\\ApisContratos\\ApisContratos\\obj\\",
+        "projectPath": "D:\\ApisContratos1104\\ApisContratos\\ApisContratos\\ApisContratos.csproj",
+        "packagesPath": "C:\\Users\\robotltd\\.nuget\\packages\\",
+        "outputPath": "D:\\ApisContratos1104\\ApisContratos\\ApisContratos\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\GAMER XTREME\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\robotltd\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -26,7 +22,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
