@@ -9,4 +9,14 @@
         public int id { get; set; } 
     }
 
+    public class REQUEST_NroOperacion
+    {
+        public int NroOperacion { get; set; }
+    }
+
+    public class REQUEST_JEFE_AGENCIA
+    {
+        public string jefeAgencia { get; set; }
+    }
+
 }

@@ -11,4 +11,9 @@
         public Int64 numero_operacion { get; set; }
         public string Estado { get; set; }
     }
+
+    public class REPRESENTANTES_LEGALES_Response
+    {
+
+    }
 }

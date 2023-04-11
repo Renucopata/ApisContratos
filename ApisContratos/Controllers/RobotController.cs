@@ -10,7 +10,7 @@ namespace ApisContratos.Controllers
     public class RobotController : ControllerBase
     {
 
-        [HttpGet] // Probada y funcionando
+        [HttpGet] //Terminada
         [Route("GetAllProcRWeb")]
         public IActionResult getProcRweb()
         {
@@ -20,7 +20,7 @@ namespace ApisContratos.Controllers
             return Ok(pro.getProcsRWeb());
         }
 
-        [HttpPost] // Probada y funcionando
+        [HttpPost] //Terminada
         [Route("GetAllProcRWeb")]
         public IActionResult getProcRweb([FromBody] REQUEST_ID data)
         {
@@ -28,6 +28,36 @@ namespace ApisContratos.Controllers
             Procedures pro = new Procedures();
             ModelState.Clear();
             return Ok(pro.deleteRWeb(data.id));
+        }
+
+        [HttpPost] // Probada y funcionando
+        [Route("UpdateEstadoContratos")]
+        public IActionResult updateEstadoCon([FromBody] REQUEST_NroOperacion data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.updateEstadoContratos(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada
+        [Route("GetContratosByNumOp")]
+        public IActionResult GetContratosByNumOp([FromBody] REQUEST_NroOperacion data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getContratosNumOp(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada
+        [Route("GetRepreLegalByJefeAg")]
+        public IActionResult GetRepreByJefeAg([FromBody] REQUEST_JEFE_AGENCIA data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getRepreJefeAg(data.jefeAgencia));
         }
 
 
