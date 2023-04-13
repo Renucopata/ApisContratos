@@ -74,4 +74,49 @@
         public Int64 garantia_quirografaria { get; set; }
 
     }
+
+    public class INMUEBLE_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string inmueble { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string propiedad_de { get; set; }
+        public string ubicado_en { get; set; }
+        public Int64 extension_superficie { get; set; }
+        public string norte { get; set; }
+        public string sur { get; set; }
+        public string este { get; set; }
+        public string oeste { get; set; }
+        public string adquirido_por { get; set; }
+        public string nro_escritura_publica { get; set; }
+        public string departamento { get; set; }
+        public string notario { get; set; }
+        public string oficina_derechos_reales { get; set; }
+        public string nro_codigo_catastral { get; set; }
+        public string senor { get; set; }
+        public string ci { get; set; }
+        public string estado_civil { get; set; }
+        public string nacionalidad { get; set; }
+        public string domicilio { get; set; }
+        public string nro_domicilio { get; set; }
+        public string ci_conyugue { get; set; }
+        public string estado_civil_conyugue { get; set; }
+        public string nacionalidad_conyugue { get; set; }
+        public string domicilio_conyugue { get; set; }
+        public string nro_domicilio_conyugue { get; set; }
+        public string zona { get; set; }
+    }
+
+    public class SEGUNDA_HIPOTECA_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string hipoteca { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string asiento { get; set; }
+        public Int64 nro_tramite { get; set; }
+        public string nro_escritura_publica { get; set; }
+        public string notario { get; set; }
+        public DateTime fecha { get; set; }
+        public DateTime fecha_tramite { get; set; }
+    }
 }
