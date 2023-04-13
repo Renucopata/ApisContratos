@@ -9,7 +9,7 @@
         public int id { get; set; } 
     }
 
-    public class REQUEST_NroOperacion
+    public class REQUEST_NRO_OPERACION
     {
         public int NroOperacion { get; set; }
     }

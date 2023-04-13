@@ -32,7 +32,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada y probada
         [Route("UpdateEstadoContratos")]
-        public IActionResult updateEstadoCon([FromBody] REQUEST_NroOperacion data)
+        public IActionResult updateEstadoCon([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -42,7 +42,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada y probada
         [Route("GetContratosByNumOp")]
-        public IActionResult GetContratosByNumOp([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetContratosByNumOp([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -62,7 +62,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (garantia)
         [Route("GetGarantiasNumOp")]
-        public IActionResult GetGarantiasNumOp([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetGarantiasNumOp([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -73,7 +73,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (inmueble)
         [Route("GetInmuebleByNroOp")]
-        public IActionResult GetInmuebleByNroOp([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetInmuebleByNroOp([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -83,7 +83,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetSegundaHipotecaByNroOp")]
-        public IActionResult GetHipoByNoOp([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetHipoByNoOp([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -93,7 +93,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetCancelacionHipoteca")]
-        public IActionResult GetCancelacionHipoteca([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetCancelacionHipoteca([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -103,7 +103,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetCompraDeuda")]
-        public IActionResult GetCompraDeuda([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetCompraDeuda([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -113,7 +113,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetVehiculo")]
-        public IActionResult GetVehiculo([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetVehiculo([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -123,7 +123,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetCancelacionhipotecaVehiculo")]
-        public IActionResult GetCancelacionhipotecaVehiculo([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetCancelacionhipotecaVehiculo([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -133,7 +133,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetMaquinariaAgricola")]
-        public IActionResult GetMaquinariaAgricola([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetMaquinariaAgricola([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -143,7 +143,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetGarantiaWarrant")]
-        public IActionResult GetGarantiaWarrant([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetGarantiaWarrant([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -153,7 +153,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetFianza")]
-        public IActionResult GetFianza([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetFianza([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -163,7 +163,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetPrendaria")]
-        public IActionResult GetPrendaria([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetPrendaria([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -173,7 +173,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetGarantiaAutiLiquiDPF")]
-        public IActionResult GetGarantiaAutiLiquiDPF([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetGarantiaAutiLiquiDPF([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -183,7 +183,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetDPFAnotacionCuenta")]
-        public IActionResult GetDPFAnotacionCuenta([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetDPFAnotacionCuenta([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -193,7 +193,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetFondoGarantia")]
-        public IActionResult GetFondoGarantia([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetFondoGarantia([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -203,7 +203,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetFOGACP")]
-        public IActionResult GetFOGACP([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetFOGACP([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -213,7 +213,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetCustodiabienesInmueble")]
-        public IActionResult GetCustodiabienesInmueble([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetCustodiabienesInmueble([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -223,7 +223,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetActivosNoSujetos")]
-        public IActionResult GetActivosNoSujetos([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetActivosNoSujetos([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -233,7 +233,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetProductoAlmacenado")]
-        public IActionResult GetProductoAlmacenado([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetProductoAlmacenado([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -243,7 +243,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetSemoviente")]
-        public IActionResult GetSemoviente([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetSemoviente([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -253,7 +253,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetPatentePropiedadIntelec")]
-        public IActionResult GetPatentePropiedadIntelec([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetPatentePropiedadIntelec([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -263,7 +263,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetGarantiaDereAutor")]
-        public IActionResult GetGarantiaDereAutor([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetGarantiaDereAutor([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -273,7 +273,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetCompromiVentaFuturo")]
-        public IActionResult GetCompromiVentaFuturo([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetCompromiVentaFuturo([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();
@@ -283,7 +283,7 @@ namespace ApisContratos.Controllers
 
         [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
         [Route("GetAsignados")]
-        public IActionResult GetAsignados([FromBody] REQUEST_NroOperacion data)
+        public IActionResult GetAsignados([FromBody] REQUEST_NRO_OPERACION data)
         {
 
             Procedures pro = new Procedures();

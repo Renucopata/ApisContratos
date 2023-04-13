@@ -8,9 +8,9 @@ namespace ApisContratos.Handlers
     {
         
        
-        public R_WEB_Response getProcsRWeb()
+        public R_WEB_RESPONSE getProcsRWeb()
         {
-            var response = new R_WEB_Response();
+            var response = new R_WEB_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -110,9 +110,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public CONTRATOS_WEB_Response getContratosNumOp(int nroOp)
+        public CONTRATOS_WEB_RESPONSE getContratosNumOp(int nroOp)
         {
-            var response = new CONTRATOS_WEB_Response();
+            var response = new CONTRATOS_WEB_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -156,9 +156,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public List<REPRESENTANTES_LEGALES_Response> getRepreJefeAg(string jefeAgencia)
+        public List<REPRESENTANTES_LEGALES_RESPONSE> getRepreJefeAg(string jefeAgencia)
         {
-            var responseList = new List<REPRESENTANTES_LEGALES_Response>();
+            var responseList = new List<REPRESENTANTES_LEGALES_RESPONSE>();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -178,7 +178,7 @@ namespace ApisContratos.Handlers
                             {
                                 for (int i = 0; i < dt.Rows.Count; i++)
                                 {
-                                    var response = new REPRESENTANTES_LEGALES_Response();
+                                    var response = new REPRESENTANTES_LEGALES_RESPONSE();
                                     response.IdTabla = Convert.ToInt64(dt.Rows[i]["IdTabla"]);
                                     response.Nombre_Representante = dt.Rows[i]["Nombre_Representante"].ToString();
                                     response.Domicilio_Representante = dt.Rows[i]["Domicilio_Representante"].ToString();
@@ -210,9 +210,9 @@ namespace ApisContratos.Handlers
             return responseList;
         }
 
-        public GARANTIAS_Response getGarantiasNumOp(int nroOp)
+        public GARANTIAS_RESPONSE getGarantiasNumOp(int nroOp)
         {
-            var response = new GARANTIAS_Response();
+            var response = new GARANTIAS_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -365,9 +365,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getCancelacionHipo(int nroOp)
+        public CANCELACION_HIPOTECA getCancelacionHipo(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new CANCELACION_HIPOTECA();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -386,10 +386,10 @@ namespace ApisContratos.Handlers
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
                                 response.asiento = Convert.ToString(reader["asiento"]);
                                 response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
+                                response.fecha = Convert.ToDateTime(reader["fecha"]);
                                 response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
                                 response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.fecha_notario = Convert.ToDateTime(reader["fecha_notario"]);
 
                             }
                         }
