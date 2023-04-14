@@ -291,6 +291,56 @@ namespace ApisContratos.Controllers
             return Ok(pro.getAsignados(data.NroOperacion));
         }
 
+        [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
+        [Route("Getgeneral_prmpr")]
+        public IActionResult Getgeneral_prmpr([FromBody] REQUEST_NRO_OPERACION data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getgeneral_prmpr(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
+        [Route("Getgbage")]
+        public IActionResult Getgbage([FromBody] REQUEST_NRO_OPERACION data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getgbage(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
+        [Route("GetTempCartera")]
+        public IActionResult GetTempCartera([FromBody] REQUEST_NRO_OPERACION data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getTempCartera(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
+        [Route("Getbagecage")]
+        public IActionResult Getbagecage([FromBody] REQUEST_NRO_OPERACION data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getbagecage(data.NroOperacion));
+        }
+
+        [HttpPost] // Terminada no hay data para probar (segunda_hipoteca)
+        [Route("Getprmprnpre")]
+        public IActionResult Getprmprnpre([FromBody] REQUEST_NRO_OPERACION data)
+        {
+
+            Procedures pro = new Procedures();
+            ModelState.Clear();
+            return Ok(pro.getprmprnpre(data.NroOperacion));
+        }
+
 
     }
 }

@@ -406,9 +406,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getCompraDeuda(int nroOp)
+        public COMPRA_DEUDA getCompraDeuda(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new COMPRA_DEUDA();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -423,14 +423,13 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
-                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
                                 response.asiento = Convert.ToString(reader["asiento"]);
+                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
                                 response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
+                                response.notario = Convert.ToString(reader["notario"]);       
+                                response.fecha_notario = Convert.ToDateTime(reader["fecha_notario"]);
 
                             }
                         }
@@ -447,9 +446,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getVehiculo(int nroOp)
+        public VEHICULO_RESPONSE getVehiculo(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new VEHICULO_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -464,14 +463,33 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.propiedad_de = Convert.ToString(reader["propiedad_de"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
+                                response.marca = Convert.ToString(reader["marca"]);
+                                response.clase = Convert.ToString(reader["clase"]);
+                                response.placa = Convert.ToString(reader["placa"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.nro_chasis = Convert.ToString(reader["nro_chasis"]);
+                                response.nro_motor = Convert.ToString(reader["nro_motor"]);
+                                response.modelo = Convert.ToString(reader["modelo"]);
+                                response.persona_vehiculo = Convert.ToString(reader["persona_vehiculo"]);
+                                response.ci = Convert.ToString(reader["ci"]);
+                                response.estado_civil = Convert.ToString(reader["estado_civil"]);
+                                response.nacionalidad = Convert.ToString(reader["nacionalidad"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
+                                response.persona_vehiculo_dos = Convert.ToString(reader["persona_vehiculo_dos"]);
+                                response.ci_dos = Convert.ToString(reader["ci_dos"]);
+                                response.estado_civil_dos = Convert.ToString(reader["estado_civil_dos"]);
+                                response.nacionalidad_dos = Convert.ToString(reader["nacionalidad_dos"]);
+                                response.domicilio_dos = Convert.ToString(reader["domicilio_dos"]);
+                                response.persona_conyugue = Convert.ToString(reader["persona_conyugue"]);
+                                response.ci_conyugue = Convert.ToString(reader["ci_conyugue"]);
+                                response.estado_civil_conyugue = Convert.ToString(reader["estado_civil_conyugue"]);
+                                response.nacionalidad_conyugue = Convert.ToString(reader["nacionalidad_conyugue"]);
+                                response.domicilio_conyugue = Convert.ToString(reader["domicilio_conyugue"]);
+                                response.nro_domicilio = Convert.ToString(reader["nro_domicilio"]);
+                                response.nro_domicilio_dos = Convert.ToString(reader["nro_domicilio_dos"]);
+                                response.nro_domicilio_conyugue = Convert.ToString(reader["nro_domicilio_conyugue"]);
 
                             }
                         }
@@ -488,9 +506,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getCancelahipoVehiculo(int nroOp)
+        public CANCELACION_HIPOTECA_VEHIC_RESPONSE getCancelahipoVehiculo(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new CANCELACION_HIPOTECA_VEHIC_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -505,14 +523,13 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nro_hoja_ruta = Convert.ToString(reader["nro_hoja_ruta"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
+                                response.fecha = Convert.ToDateTime(reader["fecha"]);
                                 response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
                                 response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.fecha_notario = Convert.ToDateTime(reader["fecha"]);
+
 
                             }
                         }
@@ -529,9 +546,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getMaquinaAgri(int nroOp)
+        public MAQUINARIA_AGRICOLA_RESPONSE getMaquinaAgri(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new MAQUINARIA_AGRICOLA_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -546,14 +563,18 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.propepiedad_de = Convert.ToString(reader["propepiedad_de"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
+                                response.caracteristicas = Convert.ToString(reader["caracteristicas"]);
+                                response.registrado = Convert.ToString(reader["registrado"]);
+                                response.registro = Convert.ToString(reader["registro"]);
+                                response.fojas = Convert.ToString(reader["fojas"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.senor = Convert.ToString(reader["senor"]);
+                                response.ci = Convert.ToString(reader["ci"]);
+                                response.estado_civil = Convert.ToString(reader["estado_civil"]);
+                                response.nacionalidad = Convert.ToString(reader["nacionalidad"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
 
                             }
                         }
@@ -570,9 +591,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getGarantiaWarrant(int nroOp)
+        public GARANTIA_WARRANT_RESPONSE getGarantiaWarrant(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new GARANTIA_WARRANT_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -587,14 +608,20 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nro_prenda = Convert.ToString(reader["nro_prenda"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.emitido = Convert.ToString(reader["emitido"]);
+                                response.fecha_inicio = Convert.ToDateTime(reader["fecha_inicio"]);
+                                response.fecha_vencimiento = Convert.ToDateTime(reader["fecha_vencimiento"]);
+                                response.vigencia = Convert.ToString(reader["vigencia"]);
+                                response.dias_vigencia = Convert.ToString(reader["dias_vigencia"]);
+                                response.valor = Convert.ToDecimal(reader["valor"]);
+                                response.meses = Convert.ToString(reader["meses"]);
+                                response.numero = Convert.ToString(reader["numero"]);
+                                response.precio_promedio = Convert.ToString(reader["precio_promedio"]);
+                                response.precio = Convert.ToDecimal(reader["precio"]);
+                                response.empresa = Convert.ToString(reader["empresa"]);
+                                response.endoso = Convert.ToString(reader["endoso"]);
 
                             }
                         }
@@ -611,9 +638,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getFianza(int nroOp)
+        public FIANZA_RESPONSE getFianza(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new FIANZA_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -628,14 +655,12 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.senor = Convert.ToString(reader["senor"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.ci = Convert.ToString(reader["ci"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
+                                response.estado_civil = Convert.ToString(reader["estado_civil"]);
+                                response.nacionalidad = Convert.ToString(reader["nacionalidad"]);
 
                             }
                         }
@@ -652,9 +677,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getPrendaria(int nroOp)
+        public PRENDARIA_RESPONSE getPrendaria(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new PRENDARIA_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -669,14 +694,10 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.detalle = Convert.ToString(reader["detalle"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.senor = Convert.ToString(reader["senor"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
 
                             }
                         }
@@ -693,9 +714,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getGarantiaAutiLiquiDPF(int nroOp)
+        public GARANTIA_AUTOLIQUI_DPF_RESPONSE getGarantiaAutiLiquiDPF(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new GARANTIA_AUTOLIQUI_DPF_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -710,14 +731,14 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.numero = Convert.ToInt64(reader["numero"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.moneda = Convert.ToString(reader["moneda"]);
+                                response.monto = Convert.ToDecimal(reader["monto"]);
+                                response.fecha_emision = Convert.ToDateTime(reader["fecha_emision"]);
+                                response.fecha_vencimiento = Convert.ToDateTime(reader["fecha_vencimiento"]);
+                                response.a_favor = Convert.ToString(reader["a_favor"]);
+                                response.plazo = Convert.ToString(reader["plazo"]);
 
                             }
                         }
@@ -734,9 +755,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getDPFAnotacionCuenta(int nroOp)
+        public DPF_ANOTACION_CUENTA_RESPONSE getDPFAnotacionCuenta(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new DPF_ANOTACION_CUENTA_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -751,14 +772,13 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nombre_ordenante = Convert.ToString(reader["nombre_ordenante"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.entidad_financiera = Convert.ToString(reader["entidad_financiera"]);
+                                response.nombre_entidad_financiera = Convert.ToString(reader["nombre_entidad_financiera"]);
+                                response.numero = Convert.ToInt64(reader["numero"]);
+                                response.suma = Convert.ToDecimal(reader["suma"]);
+                                response.cuenta = Convert.ToString(reader["cuenta"]);
 
                             }
                         }
@@ -775,9 +795,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getFondoGarantia(int nroOp)
+        public FONDO_GARANTIA_RESPONSE getFondoGarantia(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new FONDO_GARANTIA_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -792,14 +812,12 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.fondo_garantia = Convert.ToString(reader["fondo_garantia"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.porcentaje = Convert.ToString(reader["porcentaje"]);
+                                response.numero_porcentaje = Convert.ToDecimal(reader["numero_porcentaje"]);
+                                response.mora = Convert.ToString(reader["mora"]);
+                                response.monto = Convert.ToDecimal(reader["monto"]);
 
                             }
                         }
@@ -816,9 +834,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getFOGACP(int nroOp)
+        public FOGACP_RESPONSE getFOGACP(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new FOGACP_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -833,14 +851,13 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.monto_total = Convert.ToDecimal(reader["monto_total"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.tipo_amortizacion = Convert.ToString(reader["tipo_amortizacion"]);
+                                response.porcentaje = Convert.ToString(reader["porcentaje"]);
+                                response.numero_porcentaje = Convert.ToDecimal(reader["numero_porcentaje"]);
+                                response.monto = Convert.ToDecimal(reader["monto"]);
+                                response.sector = Convert.ToString(reader["sector"]);
 
                             }
                         }
@@ -857,9 +874,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getCustodiabienesInmueble(int nroOp)
+        public CUSTODIA_BIENES_INMUEBLE_RESPONSE getCustodiabienesInmueble(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new CUSTODIA_BIENES_INMUEBLE_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -874,14 +891,10 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nombre = Convert.ToString(reader["nombre"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.calidad = Convert.ToString(reader["calidad"]);
+                             
 
                             }
                         }
@@ -898,9 +911,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getActivosNoSujetos(int nroOp)
+        public ACTIVOS_NO_SUJETOS_RESPONSE getActivosNoSujetos(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new ACTIVOS_NO_SUJETOS_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -915,15 +928,11 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nombre_depositario = Convert.ToString(reader["nombre_depositario"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
-
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
+                                response.calidad = Convert.ToString(reader["calidad"]);
+                      
                             }
                         }
 
@@ -939,9 +948,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getProductoAlmacenado(int nroOp)
+        public PRODUCTO_ALMACENADO_RESPONSE getProductoAlmacenado(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new PRODUCTO_ALMACENADO_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -956,15 +965,14 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
-                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
-
+                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
+                                response.senor = Convert.ToString(reader["senor"]);
+                                response.ci = Convert.ToString(reader["ci"]);
+                                response.plazo = Convert.ToString(reader["plazo"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
+                                response.ciudad = Convert.ToString(reader["ciudad"]);
+  
                             }
                         }
 
@@ -980,9 +988,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getSemoviente(int nroOp)
+        public SEMOVIENTE_RESPONSE getSemoviente(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new SEMOVIENTE_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -997,14 +1005,17 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.nombre = Convert.ToString(reader["nombre"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.domicilio = Convert.ToString(reader["domicilio"]);
+                                response.numero = Convert.ToInt64(reader["numero"]);
+                                response.especie = Convert.ToString(reader["especie"]);
+                                response.raza = Convert.ToString(reader["raza"]);
+                                response.sexo = Convert.ToString(reader["sexo"]);
+                                response.peso = Convert.ToDecimal(reader["peso"]);
+                                response.edad = Convert.ToString(reader["edad"]);
+                                response.color = Convert.ToString(reader["color"]);
+                                response.marcas_señales_ = Convert.ToString(reader["marcas_señales_"]);
 
                             }
                         }
@@ -1021,9 +1032,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getPatentePropiedadIntelec(int nroOp)
+        public PATENTE_PROPIEDAD_INTELEC_RESPONSE getPatentePropiedadIntelec(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new PATENTE_PROPIEDAD_INTELEC_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -1038,14 +1049,16 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.numero_certificado = Convert.ToInt64(reader["numero_certificado"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.correspondiendo = Convert.ToString(reader["correspondiendo"]);
+                                response.tipo = Convert.ToString(reader["tipo"]);
+                                response.clase = Convert.ToString(reader["clase"]);
+                                response.numero_registro = Convert.ToInt64(reader["numero_registro"]);
+                                response.numero_resolucion = Convert.ToInt64(reader["numero_resolucion"]);
+                                response.registro = Convert.ToString(reader["registro"]);
+
 
                             }
                         }
@@ -1062,9 +1075,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getGarantiaDereAutor(int nroOp)
+        public GARANTIA_DERECHO_AUTOR_RESPONSE getGarantiaDereAutor(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new GARANTIA_DERECHO_AUTOR_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -1079,14 +1092,9 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
+                                response.numero_resolucion = Convert.ToInt64(reader["numero_resolucion"]);
                                 response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
 
                             }
                         }
@@ -1103,9 +1111,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getCompromiVentaFuturo(int nroOp)
+        public COMPROMISO_VENTA_FUTURO_RESPONSE getCompromiVentaFuturo(int nroOp)
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new COMPROMISO_VENTA_FUTURO_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -1120,14 +1128,11 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
-                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
                                 response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
+                                response.senor = Convert.ToString(reader["senor"]);
+                                response.productos = Convert.ToString(reader["productos"]);
+                                response.fecha_dos = Convert.ToDateTime(reader["fecha_dos"]);
 
                             }
                         }
@@ -1144,9 +1149,9 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-        public SEGUNDA_HIPOTECA_RESPONSE getAsignados(int nroOp)
+        public ASIGNADOS_RESPONSE getAsignados(int nroOp) //No hay correos asignados en la base de asignados
         {
-            var response = new SEGUNDA_HIPOTECA_RESPONSE();
+            var response = new ASIGNADOS_RESPONSE();
             var cn = new ContratosConnection();
             using (var conexion = new SqlConnection(cn.get_cadConexion()))
             {
@@ -1161,14 +1166,41 @@ namespace ApisContratos.Handlers
                             while (reader.Read())
                             {
                                 response.id = Convert.ToInt64(reader["id"]);
-                                response.hipoteca = Convert.ToString(reader["inmueble"]);
-                                response.numero_operacion_id = Convert.ToInt64(reader["numero_operacion_id"]);
-                                response.asiento = Convert.ToString(reader["asiento"]);
-                                response.nro_tramite = Convert.ToInt64(reader["nro_tramite"]);
-                                response.nro_escritura_publica = Convert.ToString(reader["nro_escritura_publica"]);
-                                response.notario = Convert.ToString(reader["notario"]);
-                                response.fecha = Convert.ToDateTime(reader["fecha"]);
-                                response.fecha_tramite = Convert.ToDateTime(reader["fecha_tramite"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
+
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+
+
+            }
+            return response;
+        }
+         //Servidor: 254 satge
+        public ASIGNADOS_RESPONSE getgeneral_prmpr(int nroOp) //No hay correos asignados en la base de asignados
+        {
+            var response = new ASIGNADOS_RESPONSE();
+            var cn = new StageConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "select gbagenomb,* from general.prmpr left join gbage on gbagecage = prmprcage where prmprnpre='" + nroOp + "'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                response.id = Convert.ToInt64(reader["id"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
 
                             }
                         }
@@ -1185,6 +1217,142 @@ namespace ApisContratos.Handlers
             return response;
         }
 
-       
+        public ASIGNADOS_RESPONSE getgbage(int codigo) //No hay correos asignados en la base de asignados
+        {
+            var response = new ASIGNADOS_RESPONSE();
+            var cn = new StageConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "select gbagendid, gbageeciv, gbagenaci, gbageddo1, gbageddo2 from gbage where gbagecage ='" + codigo + "'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                response.id = Convert.ToInt64(reader["id"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
+
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+
+
+            }
+            return response;
+        }
+
+        public ASIGNADOS_RESPONSE getTempCartera(int nroOp) //No hay correos asignados en la base de asignados
+        {
+            var response = new ASIGNADOS_RESPONSE();
+            var cn = new StageConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "select gbagenomb, prdeucage, prdeutres from TempCartera.prdeu left join gbage on gbagecage = prdeucage where prdeunpre= '{numero_operacion}' and prdeucage not in (select prmprcage from general.prmpr where prmprnpre='" + nroOp + "'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                response.id = Convert.ToInt64(reader["id"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
+
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+
+
+            }
+            return response;
+        }
+
+        public ASIGNADOS_RESPONSE getbagecage(int codigo) //No hay correos asignados en la base de asignados
+        {
+            var response = new ASIGNADOS_RESPONSE();
+            var cn = new StageConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "select gbagendid, gbageeciv, gbagenaci, gbageddo1, gbageddo2 from gbage where gbagecage ='" + codigo + "'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                response.id = Convert.ToInt64(reader["id"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
+
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+
+
+            }
+            return response;
+        }
+
+        public ASIGNADOS_RESPONSE getprmprnpre(int nroOp) //No hay correos asignados en la base de asignados
+        {
+            var response = new ASIGNADOS_RESPONSE();
+            var cn = new StageConnection();
+            using (var conexion = new SqlConnection(cn.get_cadConexion()))
+            {
+                try
+                {
+                    conexion.Open();
+                    string query = "select prmprcmon, prmprmdes, prmprlncr from general.prmpr where prmprnpre ='" + nroOp + "'";
+                    using (SqlCommand command = new SqlCommand(query, conexion))
+                    {
+                        using (SqlDataReader reader = command.ExecuteReader())
+                        {
+                            while (reader.Read())
+                            {
+                                response.id = Convert.ToInt64(reader["id"]);
+                                response.Asignado = Convert.ToString(reader["Asignado"]);
+
+                            }
+                        }
+
+                    }
+                }
+                catch (Exception ex)
+                {
+                    throw;
+                }
+
+
+            }
+            return response;
+        }
+
+
     }
 }

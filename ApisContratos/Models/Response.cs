@@ -246,5 +246,144 @@
 
     }
 
+    public class GARANTIA_AUTOLIQUI_DPF_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public Int64 numero { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string moneda { get; set; }
+        public Decimal monto { get; set; }
+        public DateTime fecha_emision { get; set; }
+        public DateTime fecha_vencimiento { get; set; }
+        public string a_favor { get; set; }
+        public string plazo { get; set; }
+
+    }
+
+    public class DPF_ANOTACION_CUENTA_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string nombre_ordenante { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string entidad_financiera { get; set; }
+        public string nombre_entidad_financiera { get; set; }
+        public Int64 numero { get; set; }
+        public Decimal suma { get; set; }
+        public string cuenta { get; set; }
+    }
+
+    public class FONDO_GARANTIA_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string fondo_garantia { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string porcentaje { get; set; }
+        public Decimal numero_porcentaje { get; set; }
+        public string mora { get; set; }
+        public Decimal monto { get; set; }
+    }
+
+    public class FOGACP_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public Decimal monto_total { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string tipo_amortizacion { get; set; }
+        public string porcentaje { get; set; }
+        public Decimal numero_porcentaje { get; set; }
+        public Decimal monto { get; set; }
+        public string sector { get; set; }
+    }
+
+    public class CUSTODIA_BIENES_INMUEBLE_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string nombre { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string calidad { get; set; }
+       
+    }
+    public class ACTIVOS_NO_SUJETOS_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string nombre_depositario { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string domicilio { get; set; }
+        public string calidad { get; set; }
+
+    }
+
+    public class PRODUCTO_ALMACENADO_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public DateTime fecha { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string senor { get; set; }
+        public string ci { get; set; }
+        public string plazo { get; set; }
+        public string domicilio { get; set; }
+        public string ciudad { get; set; }
+
+    }
+
+    public class PATENTE_PROPIEDAD_INTELEC_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public Int64 numero_certificado { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public DateTime fecha { get; set; }
+        public string correspondiendo { get; set; }
+        public string tipo { get; set; }
+        public string clase { get; set; }
+        public Int64 numero_registro { get; set; }
+        public Int64 numero_resolucion{ get; set; }
+        public string registro { get; set; }
+
+    }
+
+    public class SEMOVIENTE_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string nombre { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string domicilio { get; set; }
+        public Int64 numero { get; set; }
+        public string especie { get; set; }
+        public string raza { get; set; }
+        public string sexo { get; set; }
+        public Decimal peso { get; set; }
+        public string edad { get; set; }
+        public string color { get; set; }
+        public string marcas_señales_ { get; set; }
+
+    }
+
+    public class GARANTIA_DERECHO_AUTOR_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public Int64 numero_resolucion { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public DateTime fecha { get; set; }  
+
+    }
+
+    public class COMPROMISO_VENTA_FUTURO_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public DateTime fecha { get; set; }
+        public Int64 numero_operacion_id { get; set; }
+        public string senor { get; set; }
+        public string productos { get; set; }
+        public DateTime fecha_dos { get; set; }
+
+    }
+
+
+    public class ASIGNADOS_RESPONSE
+    {
+        public Int64 id { get; set; }
+        public string Asignado { get; set; }
+
+    }
 }
 
