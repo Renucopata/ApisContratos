@@ -385,5 +385,97 @@
         public string Asignado { get; set; }
 
     }
+
+    public class GBAGENOMB_PRMPR_RESPONSE
+    {
+        public Int64 prmprnpre { get; set; }
+        public Int64 prmprcage { get; set; }
+        public string prmprfreg { get; set; }
+        public string prmprnctr { get; set; }
+        public Int64 prmprlncr { get; set; }
+        public string prmprreso { get; set; }
+        public Int64 prmprtcre { get; set; }
+        public Int64 prmprorgr { get; set; }
+        public Int64 prmprautp { get; set; }
+        public Int64 prmprrseg { get; set; }
+        public Int64 prmprconv { get; set; }
+        public Int64 prmprrubr { get; set; }
+        public Int64 prmprciiu { get; set; }
+        public Int64 prmprdest { get; set; }
+        public string prmprddes { get; set; }
+        public Int64 prmprcmon { get; set; }
+        public Int64 prmprmapt { get; set; }
+        public Int64 prmprplzo { get; set; }
+        public Int64 prmpruplz { get; set; }
+        public Int64 prmprtsex { get; set; }
+        public Int64 prmprfpag { get; set; }
+        public Int64 prmprppgk { get; set; }
+        public Int64 prmprppgi { get; set; }
+        public Int64 prmprgrac { get; set; }
+        public Int64 prmpruppg { get; set; }
+        public Int64 prmprdiap { get; set; }
+        public string prmprfprp { get; set; }
+        public Int64 prmpriupg { get; set; }
+        public Int64 prmprsald { get; set; }
+        public Int64 prmprkven { get; set; }
+        public Int64 prmprmdes { get; set; }
+        public Int64 prmprmseg { get; set; }
+        public Int64 prmprstat { get; set; }
+        public string prmprfsta { get; set; }
+        public string prmprfpvc { get; set; }
+        public string prmprfvac { get; set; }
+        public string prmprfvor { get; set; }
+        public Int64 prmprstan { get; set; }
+        public string prmprfsan { get; set; }
+        public string prmprfdes { get; set; }
+        public string prmprfulp { get; set; }
+        public Int64 prmprfcal { get; set; }
+        public string prmprcalf { get; set; }
+        public Int64 prmprviad { get; set; }
+        public string prmprctad { get; set; }
+        public Int64 prmprviac { get; set; }
+        public string prmprctac { get; set; }
+        public string prmprdeba { get; set; }
+        public Int64 prmprcrpg { get; set; }
+        public string prmprfrpg { get; set; }
+        public Int64 prmprpdvg { get; set; }
+        public Int64 prmprpsus { get; set; }
+        public string prmprfdev { get; set; }
+        public char prmprmcpd { get; set; }
+        public char prmprreve { get; set; }
+        public string prmprusrr { get; set; }
+        public Int64 prmprmrcb { get; set; }
+        public Int64 prmprplaz { get; set; }
+        public Int64 prmpragen { get; set; }
+        public string prmpruser { get; set; }
+        public string prmprhora { get; set; }
+        public string prmprfpro { get; set; }
+        public Int64 prmprcclf { get; set; }
+        public Int64 prmprcpac { get; set; }
+        public Int64 prmprnlex { get; set; }
+        public Int64 prmprnmod { get; set; }
+        public string prmprfinc { get; set; }
+        public Int64 prmprnatu { get; set; }
+        public Int64 prmprnprp { get; set; }
+        public Int64 prmprctpp { get; set; }
+        public Int64 prmprcbnq { get; set; }
+        public Int64 prmprnrpg { get; set; }
+        public Int64 prmprpais { get; set; }
+        public Int64 prmprdpto { get; set; }
+        public Int64 prmprcprv { get; set; }
+        public Int64 prmprciud { get; set; }
+        public Int64 prmprzona { get; set; }
+        public Int64 prmprcmun { get; set; }
+        public Int64 prmprambg { get; set; }
+        public Int64 prmprcgta { get; set; }
+        public Int64 prmprugps { get; set; }
+        public Int64 prmprlong { get; set; }
+        public Int64 prmprlati { get; set; }
+        public Int64 prmprnfam { get; set; }
+
+
+    }
+
+
 }
 

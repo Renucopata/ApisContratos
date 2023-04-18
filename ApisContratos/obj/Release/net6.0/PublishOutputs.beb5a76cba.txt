@@ -1,0 +1,17 @@
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\ApisContratos.exe
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\appsettings.Development.json
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\appsettings.json
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\ApisContratos.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\ApisContratos.deps.json
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\ApisContratos.runtimeconfig.json
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\ApisContratos.pdb
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\Microsoft.OpenApi.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.Swagger.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\System.Data.SqlClient.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\runtimes\win-arm64\native\sni.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\runtimes\win-x64\native\sni.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\runtimes\win-x86\native\sni.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
+D:\ApisContratos1104\ApisContratos\ApisContratos\obj\Release\net6.0\PubTmp\Out\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
